@@ -155,3 +155,24 @@ Replaced `require('fs')` with `import fs from 'node:fs'`.
 **Commit**
 
 `fix: convert fs import to ESM`
+
+
+
+
+### Error 4
+
+**Error message**
+
+`ReferenceError: require is not defined in ES module scope`
+
+**Cause**
+
+`lib/tasks.js` uses CommonJS `require()` to load the path module.
+
+**Fix**
+
+Replaced `require('path')` with `import path from 'node:path'`.
+
+**Commit**
+
+`fix: convert path import to ESM`
