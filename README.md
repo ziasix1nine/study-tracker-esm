@@ -216,3 +216,24 @@ Replaced `__dirname` with `import.meta.dirname`.
 **Commit**
 
 `fix: replace dirname with import.meta.dirname`
+
+
+
+
+### Error 7
+
+**Error message**
+
+`ReferenceError: require is not defined in ES module scope`
+
+**Cause**
+
+`index.js` uses CommonJS `require()` to load the formatting functions.
+
+**Fix**
+
+Converted `format.js` to named ES module exports and updated the import in `index.js`.
+
+**Commit**
+
+`fix: convert format module to ESM`

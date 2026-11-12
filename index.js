@@ -2,7 +2,7 @@
 
 import config from './config.json' with { type: 'json' };
 import * as tasks from './lib/tasks.js';
-const { formatTask, formatSummary } = require('./lib/format');
+import { formatTask, formatSummary } from './lib/format.js';
 
 const [command, ...args] = process.argv.slice(2);
 
