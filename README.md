@@ -262,3 +262,9 @@ Open tasks:
 [ ] T002  Take Quiz 08
 [ ] T003  Start the module migration assignment
 ```
+
+
+
+## 6. Reflection
+
+One error I encountered was `ReferenceError: require is not defined in ES module scope`. At first, I thought Node.js could not find the required module. After reading the error message, I realized that adding `"type": "module"` made Node.js treat `.js` files as ES modules, where `require()` is not available. I fixed this by replacing CommonJS imports with ES module imports. I learned that when migrating a project, I should check the module system and file extensions before changing the code. I would advise a teammate to read the first line of the error carefully.
