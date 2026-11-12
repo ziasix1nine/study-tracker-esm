@@ -114,3 +114,24 @@ Replaced `require('./config.json')` with an ES module JSON import:
 **Commit**
 
 `fix: convert config to ESM import`
+
+
+
+
+### Error 2
+
+**Error message**
+
+`SyntaxError: The requested module './lib/tasks.js' does not provide an export named 'default'`
+
+**Cause**
+
+The tasks module used CommonJS `module.exports`, but `index.js` expected an ES module export.
+
+**Fix**
+
+Replaced `module.exports` with a named ES module export and updated the import in `index.js`.
+
+**Commit**
+
+`fix: convert tasks exports to ESM`

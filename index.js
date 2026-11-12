@@ -1,7 +1,7 @@
 'use strict';
 
 import config from './config.json' with { type: 'json' };
-const tasks = require('./lib/tasks');
+import * as tasks from './lib/tasks.js';
 const { formatTask, formatSummary } = require('./lib/format');
 
 const [command, ...args] = process.argv.slice(2);
