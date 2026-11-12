@@ -135,3 +135,23 @@ Replaced `module.exports` with a named ES module export and updated the import i
 **Commit**
 
 `fix: convert tasks exports to ESM`
+
+
+
+### Error 3
+
+**Error message**
+
+`ReferenceError: require is not defined in ES module scope`
+
+**Cause**
+
+`lib/tasks.js` uses CommonJS `require()` to load the file system module.
+
+**Fix**
+
+Replaced `require('fs')` with `import fs from 'node:fs'`.
+
+**Commit**
+
+`fix: convert fs import to ESM`
