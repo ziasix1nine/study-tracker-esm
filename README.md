@@ -67,3 +67,14 @@ Study Tracker: 2/4 tasks complete (50%)
 ### Explanation
 
 The imported modules load before the main module's regular statements execute. The database and banner messages appear first, followed by the main start message. Then connect() runs and the final line prints the returned values.
+
+
+### Actual output
+
+    db: module loaded
+    banner: module loaded
+    main: start
+    db: connect() called
+    main: end -> connected | Study Tracker
+
+The actual output matched my prediction.
