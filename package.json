@@ -1,6 +1,7 @@
 {
   "name": "study-tracker",
   "version": "1.0.0",
+  "type": "module",
   "description": "A small command-line tracker for study tasks (legacy CommonJS version)",
   "main": "index.js",
   "scripts": {
