@@ -27,3 +27,28 @@ No npm packages are required.
 | `demo/` | Predict-then-verify demo — **do not run until told to in the instructions** |
 
 > Replace this README with your own as described in the assignment.
+
+
+## 1. Baseline output
+
+### Command 1: node index.js list
+```text
+[x] T001  Read Ch. 8 of Node.js: Novice to Ninja
+[ ] T002  Take Quiz 08
+[ ] T003  Start the module migration assignment
+```
+
+### Command 2: node index.js add "Review import() for the quiz"
+```text
+Added: [ ] T004  Review import() for the quiz
+```
+
+### Command 3: node index.js done T002
+```text
+Completed: [x] T002  Take Quiz 08
+```
+
+### Command 4: node index.js summary
+```text
+Study Tracker: 2/4 tasks complete (50%)
+```
