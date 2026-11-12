@@ -5,7 +5,8 @@
   "description": "A small command-line tracker for study tasks (legacy CommonJS version)",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "report": "node scripts/report.cjs"
   },
   "engines": {
     "node": ">=22"

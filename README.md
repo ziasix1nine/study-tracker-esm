@@ -237,3 +237,28 @@ Converted `format.js` to named ES module exports and updated the import in `inde
 **Commit**
 
 `fix: convert format module to ESM`
+
+
+
+
+
+## 5. Report script
+
+Created `scripts/report.cjs` as a CommonJS script that uses dynamic `import()` to load `lib/tasks.js` and `lib/format.js`.
+
+### Command
+
+```bash
+npm run report
+```
+
+### Actual output
+
+```text
+Study Tracker Report
+Study Tracker: 1/3 tasks complete (33%)
+
+Open tasks:
+[ ] T002  Take Quiz 08
+[ ] T003  Start the module migration assignment
+```
