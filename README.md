@@ -52,3 +52,18 @@ Completed: [x] T002  Take Quiz 08
 ```text
 Study Tracker: 2/4 tasks complete (50%)
 ```
+
+
+## 2. Predict-then-verify
+
+### Predicted output
+
+    db: module loaded
+    banner: module loaded
+    main: start
+    db: connect() called
+    main: end -> connected | Study Tracker
+
+### Explanation
+
+The imported modules load before the main module's regular statements execute. The database and banner messages appear first, followed by the main start message. Then connect() runs and the final line prints the returned values.
