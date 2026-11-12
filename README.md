@@ -78,3 +78,39 @@ The imported modules load before the main module's regular statements execute. T
     main: end -> connected | Study Tracker
 
 The actual output matched my prediction.
+
+
+#	Error message
+1	ReferenceError: require is not defined in ES module scope	
+
+# Cause
+index.js uses CommonJS require()
+
+# Fix	
+Pending	
+
+# Commit
+Pending
+
+
+## 3. Error log
+
+### Error 1
+
+**Error message**
+
+`ReferenceError: require is not defined in ES module scope`
+
+**Cause**
+
+`index.js` uses CommonJS `require()`.
+
+**Fix**
+
+Replaced `require('./config.json')` with an ES module JSON import:
+
+`import config from './config.json' with { type: 'json' };`
+
+**Commit**
+
+`fix: convert config to ESM import`

@@ -1,6 +1,6 @@
 'use strict';
 
-const config = require('./config.json');
+import config from './config.json' with { type: 'json' };
 const tasks = require('./lib/tasks');
 const { formatTask, formatSummary } = require('./lib/format');
 
