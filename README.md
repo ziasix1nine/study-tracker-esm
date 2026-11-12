@@ -176,3 +176,43 @@ Replaced `require('path')` with `import path from 'node:path'`.
 **Commit**
 
 `fix: convert path import to ESM`
+
+
+
+### Error 5
+
+**Error message**
+
+`ReferenceError: require is not defined in ES module scope`
+
+**Cause**
+
+`lib/tasks.js` uses CommonJS `require()` to load the legacy ID module.
+
+**Fix**
+
+Renamed `legacy-id.js` to `legacy-id.cjs` and imported it using an ES module default import. The legacy file's code was not changed.
+
+**Commit**
+
+`fix: preserve legacy id module as CommonJS`
+
+
+
+### Error 6
+
+**Error message**
+
+`ReferenceError: __dirname is not defined in ES module scope`
+
+**Cause**
+
+`lib/tasks.js` uses `__dirname`, which is not available in ES modules.
+
+**Fix**
+
+Replaced `__dirname` with `import.meta.dirname`.
+
+**Commit**
+
+`fix: replace dirname with import.meta.dirname`
